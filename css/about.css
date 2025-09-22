@@ -1,0 +1,221 @@
+/* Global styles */
+:root {
+    --primary: #5b8c85;
+    /* calming teal */
+    --secondary: #f5f9f8;
+    --text: #333;
+    --light: #fff;
+    --shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: var(--secondary);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+header {
+    background: var(--light);
+    border-bottom: 1px solid #ddd;
+    padding: 1rem 0;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.4rem;
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text);
+    transition: color 0.2s;
+}
+
+.nav-links a:hover {
+    color: var(--primary);
+}
+
+/* Hero */
+.hero {
+    position: relative;
+    background: url('https://via.placeholder.com/1400x600/ccddee/334455?text=Peaceful+Nature+Scene') no-repeat center center/cover;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+}
+
+.hero-text {
+    max-width: 700px;
+    padding: 2em;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    animation: fadeIn 2s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* About Lead */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2em;
+    align-items: center;
+    padding: 4em 0;
+}
+
+.about-photo img {
+    border-radius: 50%;
+    width: 100%;
+    max-width: 350px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+blockquote {
+    font-style: italic;
+    margin: 1em 0;
+    padding-left: 1em;
+    border-left: 4px solid #27ae60;
+    color: #555;
+}
+
+/* Cards */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2em;
+    padding: 2em 0;
+}
+
+.card {
+    background: #fff;
+    border-radius: 15px;
+    padding: 2em;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    transition: transform 0.3s ease, border 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.card:hover {
+    transform: translateY(-5px) scale(1.02);
+    border-color: #27ae60;
+}
+
+/* Dividers */
+.divider svg {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.divider.flip svg {
+    transform: rotate(180deg);
+}
+
+/* Location Section */
+.location {
+    padding: 4em 0;
+    text-align: center;
+}
+
+.location-photo {
+    margin-top: 2em;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+}
+
+/* Floating Leaves (animated background) */
+body::before {
+    content: '';
+    position: fixed;
+    top: -50px;
+    left: 50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at 20% 20%, rgba(39, 174, 96, 0.05) 0%, transparent 60%);
+    animation: floatBg 12s infinite linear;
+    z-index: -1;
+}
+
+@keyframes floatBg {
+    from {
+        transform: translateX(0) translateY(0);
+    }
+
+    to {
+        transform: translateX(-100px) translateY(-100px);
+    }
+}
+
+/* Footer */
+footer {
+    background: #333;
+    padding: 1.5rem;
+    text-align: center;
+    margin-top: 2rem;
+    color: #fff;
+}
+
+footer nav a {
+    margin: 0 0.5rem;
+    text-decoration: none;
+    color: #fff;
+}
+
+footer nav a:hover {
+    color: #26c6da;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer-grid {
+        flex-direction: column;
+        gap: 1em;
+    }
+}

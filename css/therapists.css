@@ -1,0 +1,195 @@
+/* Global */
+:root {
+    --primary: #5b8c85;
+    /* calming teal */
+    --secondary: #f5f9f8;
+    --text: #333;
+    --light: #fff;
+    --shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: var(--secondary);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+/* Navbar */
+header {
+    position: sticky;
+    top: 0;
+    background: #fff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+nav {
+    max-width: 1100px;
+    margin: auto;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: #444;
+    margin-left: 1rem;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+    color: #6aa6a1;
+}
+
+/* Hero */
+.hero {
+    background: url("https://picsum.photos/1600/600?blur=3") center/cover no-repeat;
+    color: white;
+    text-align: center;
+    padding: 5rem 1rem;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+/* Therapist Cards */
+.therapists {
+    max-width: 1100px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 1.2rem;
+}
+
+.card:hover {
+    transform: translateY(-5px) scale(1.02);
+    border: 2px solid #6aa6a1;
+}
+
+.card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Testimonials */
+.testimonials {
+    background: #f0f8f7;
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+.testimonial-container {
+    max-width: 800px;
+    margin: auto;
+    position: relative;
+}
+
+.testimonial {
+    display: none;
+    font-style: italic;
+    font-size: 1.1rem;
+}
+
+.testimonial.active {
+    display: block;
+    animation: fade 1s;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Benefits */
+.benefits {
+    max-width: 1100px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+    text-align: center;
+}
+
+.benefit-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.benefit-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.07);
+    padding: 1.5rem;
+}
+
+/* Opening Hours */
+.hours {
+    background: #e8f5f4;
+    text-align: center;
+    padding: 3rem 1rem;
+}
+
+.hours .call {
+    margin-top: 1rem;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #444;
+}
+
+/* Footer */
+.footer {
+    background: #333;
+    padding: 1.5rem;
+    text-align: center;
+    margin-top: 2rem;
+    color: #fff;
+}
+
+.footer .nav-links a {
+    margin: 0 0.5rem;
+    text-decoration: none;
+    color: #fff;
+}
+
+.footer .nav-links a:hover {
+    color: #26c6da;
+}
