@@ -203,14 +203,41 @@ section h2 {
 /* CTA */
 .cta {
     text-align: center;
-    background: var(--primary);
+    background: #eaf2f1;
     color: var(--light);
     border-radius: 12px;
 }
 
+.cta p {
+    color: var(--primary);
+}
 .cta a {
     margin-top: 1rem;
     display: inline-block;
+}
+
+/* Testimonials */
+.testimonials {
+    background: #f0f8f7;
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+.testimonial-container {
+    max-width: 800px;
+    margin: auto;
+    position: relative;
+}
+
+.testimonial {
+    display: none;
+    font-style: italic;
+    font-size: 1.1rem;
+}
+
+.testimonial.active {
+    display: block;
+    animation: fade 1s;
 }
 
 /* Footer */

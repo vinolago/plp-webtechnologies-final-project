@@ -27,6 +27,14 @@ body {
     margin: auto;
 }
 
+.container h2 {
+    margin: 1.2rem;
+    padding: 0.8rem;
+}
+.container p {
+    text-align: start;
+}
+
 header {
     background: var(--light);
     border-bottom: 1px solid #ddd;
@@ -62,6 +70,20 @@ header {
     color: var(--primary);
 }
 
+.btn-primary {
+    background: var(--primary);
+    color: white !important;
+    padding: 1rem 1.2rem;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+    margin-top: 2.5rem;
+}
+
+.btn-primary:hover {
+    background: #4a726b;
+}
+
 /* Hero */
 .hero {
     position: relative;
@@ -72,14 +94,21 @@ header {
     align-items: center;
     color: #fff;
     text-align: center;
+    width: 100%;
 }
 
 .hero-text {
     max-width: 700px;
     padding: 2em;
-    background: rgba(0, 0, 0, 0.4);
+    /*background: rgba(0, 0, 0, 0.4); */
     border-radius: 10px;
     animation: fadeIn 2s ease;
+    color: var(--primary);
+}
+
+.hero-text h1 {
+    font-weight: bold;
+    margin: 1.2rem;
 }
 
 @keyframes fadeIn {
@@ -116,6 +145,7 @@ blockquote {
     padding-left: 1em;
     border-left: 4px solid #27ae60;
     color: #555;
+    margin-bottom: 2.5rem;
 }
 
 /* Cards */
@@ -156,6 +186,7 @@ blockquote {
 .location {
     padding: 4em 0;
     text-align: center;
+    max-height: 80;
 }
 
 .location-photo {
@@ -163,6 +194,7 @@ blockquote {
     border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     max-width: 100%;
+    height: 60%;
 }
 
 /* Floating Leaves (animated background) */
