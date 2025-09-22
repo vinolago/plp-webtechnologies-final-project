@@ -4,7 +4,7 @@
 
 A simple, elegant, and responsive psychotherapy website built with HTML, CSS, and JavaScript. The design uses soft tones, white space, and gentle animations to create a calming and professional user experience.
 
-Live link:
+Live link: https://vinolago.github.io/plp-webtechnologies-final-project/
 
 ## Pages
 
